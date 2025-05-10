@@ -1,7 +1,4 @@
-
-
 import type React from "react"
-
 import { createContext, useContext, useEffect, useState } from "react"
 
 type Theme = "dark" | "light" | "system"
@@ -51,6 +48,7 @@ export function ThemeProvider({ children, defaultTheme = "system" }: ThemeProvid
   return <ThemeProviderContext.Provider value={value}>{children}</ThemeProviderContext.Provider>
 }
 
+// Custom hook to access the theme context
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext)
 
