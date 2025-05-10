@@ -1,13 +1,12 @@
-
-
 import { useEffect, useRef } from "react"
 
 interface MiniChartProps {
   data: number[]
   change7d: number
+  theme: 'light' | 'dark' // Add theme property to match your theme context
 }
 
-export default function MiniChart({ data, change7d }: MiniChartProps) {
+export default function MiniChart({ data, change7d, theme }: MiniChartProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -23,6 +22,10 @@ export default function MiniChart({ data, change7d }: MiniChartProps) {
     canvas.width = rect.width * dpr
     canvas.height = rect.height * dpr
     ctx.scale(dpr, dpr)
+
+    // Set canvas background color based on theme
+    ctx.fillStyle = theme === 'dark' ? '#1f2937' : '#ffffff'
+    ctx.fillRect(0, 0, rect.width, rect.height)
 
     // Clear canvas
     ctx.clearRect(0, 0, rect.width, rect.height)
@@ -58,7 +61,7 @@ export default function MiniChart({ data, change7d }: MiniChartProps) {
     ctx.lineTo(0, rect.height)
     ctx.fillStyle = gradient
     ctx.fill()
-  }, [data, change7d])
+  }, [data, change7d, theme]) // Ensure theme is included in the dependency array
 
   return (
     <div className="h-12 w-full">
