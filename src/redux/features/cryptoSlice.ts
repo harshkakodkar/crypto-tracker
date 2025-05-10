@@ -2,7 +2,11 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit"
 import type { Crypto } from "../../types/crypto"
 import { generateRandomChartData, getRandomPrice, getRandomPercentage, getRandomVolume } from "../../lib/utils"
 
+<<<<<<< HEAD
+// Sample crypto data with logo URLs
+=======
 // Sample crypto data without logo URLs (handled in component)
+>>>>>>> d1eacf8b4fae48b045a06de4edf8923455881ad6
 const initialCryptos: Crypto[] = [
   {
     id: "bitcoin",
@@ -18,6 +22,10 @@ const initialCryptos: Crypto[] = [
     maxSupply: 21000000,
     chartData: generateRandomChartData(7, 60000, 70000),
     category: "currency",
+<<<<<<< HEAD
+    logo: "/images/crypto/bitcoin.png"
+=======
+>>>>>>> d1eacf8b4fae48b045a06de4edf8923455881ad6
   },
   {
     id: "ethereum",
@@ -33,6 +41,10 @@ const initialCryptos: Crypto[] = [
     maxSupply: null,
     chartData: generateRandomChartData(7, 3000, 3800),
     category: "platform",
+<<<<<<< HEAD
+    logo: "/images/crypto/ethereum.png"
+=======
+>>>>>>> d1eacf8b4fae48b045a06de4edf8923455881ad6
   },
   {
     id: "tether",
@@ -48,6 +60,10 @@ const initialCryptos: Crypto[] = [
     maxSupply: null,
     chartData: generateRandomChartData(7, 0.99, 1.01),
     category: "stablecoin",
+<<<<<<< HEAD
+    logo: "/images/crypto/tether.png"
+=======
+>>>>>>> d1eacf8b4fae48b045a06de4edf8923455881ad6
   },
   {
     id: "bnb",
@@ -63,6 +79,10 @@ const initialCryptos: Crypto[] = [
     maxSupply: 200000000,
     chartData: generateRandomChartData(7, 520, 600),
     category: "exchange",
+<<<<<<< HEAD
+    logo: "/images/crypto/bnb.png"
+=======
+>>>>>>> d1eacf8b4fae48b045a06de4edf8923455881ad6
   },
   {
     id: "solana",
@@ -78,6 +98,10 @@ const initialCryptos: Crypto[] = [
     maxSupply: null,
     chartData: generateRandomChartData(7, 110, 140),
     category: "platform",
+<<<<<<< HEAD
+    logo: "/images/crypto/solana.png"
+=======
+>>>>>>> d1eacf8b4fae48b045a06de4edf8923455881ad6
   },
   {
     id: "cardano",
@@ -93,6 +117,10 @@ const initialCryptos: Crypto[] = [
     maxSupply: 45000000000,
     chartData: generateRandomChartData(7, 0.42, 0.48),
     category: "platform",
+<<<<<<< HEAD
+    logo: "/images/crypto/cardano.png"
+=======
+>>>>>>> d1eacf8b4fae48b045a06de4edf8923455881ad6
   },
   {
     id: "xrp",
@@ -108,6 +136,10 @@ const initialCryptos: Crypto[] = [
     maxSupply: 100000000000,
     chartData: generateRandomChartData(7, 0.52, 0.58),
     category: "currency",
+<<<<<<< HEAD
+    logo: "/images/crypto/xrp.png"
+=======
+>>>>>>> d1eacf8b4fae48b045a06de4edf8923455881ad6
   },
   {
     id: "dogecoin",
@@ -123,6 +155,10 @@ const initialCryptos: Crypto[] = [
     maxSupply: null,
     chartData: generateRandomChartData(7, 0.1, 0.14),
     category: "meme",
+<<<<<<< HEAD
+    logo: "/images/crypto/dogecoin.png"
+=======
+>>>>>>> d1eacf8b4fae48b045a06de4edf8923455881ad6
   },
 ]
 
