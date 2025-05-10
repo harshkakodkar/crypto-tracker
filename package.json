@@ -3,9 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+<<<<<<< HEAD
+=======
   "engines": {
     "node": "18.x"
   },
+>>>>>>> d1eacf8b4fae48b045a06de4edf8923455881ad6
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -13,6 +16,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^7.1.0",
+=======
+>>>>>>> d1eacf8b4fae48b045a06de4edf8923455881ad6
     "@reduxjs/toolkit": "^2.8.1",
     "@tailwindcss/vite": "^4.1.6",
     "clsx": "^2.1.1",
