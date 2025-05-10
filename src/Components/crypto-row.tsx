@@ -6,14 +6,14 @@ import type { Crypto } from "../types/crypto"
 import MiniChart from "./mini-chart"
 import { useTheme } from "./theme/theme-provider"
 
-// Interface for the props, no need for Theme type declaration here
+// Interface for the props
 interface CryptoRowProps {
   crypto: Crypto
   index: number
 }
 
 export default function CryptoRow({ crypto, index }: CryptoRowProps) {
-  const { theme } = useTheme() // Ensure theme is derived from your theme context
+  const theme = useTheme() // Now it's just a string: 'light' or 'dark'
   const [priceFlash, setPriceFlash] = useState<"none" | "increase" | "decrease">("none")
   const [imgError, setImgError] = useState(false)
   const prevPriceRef = useRef(crypto.price)
@@ -117,7 +117,7 @@ export default function CryptoRow({ crypto, index }: CryptoRowProps) {
         <MiniChart
           data={crypto.chartData}
           change7d={crypto.change7d}
-          theme={theme}  // Pass the theme prop here
+          theme={theme}  // Now passing the correct theme
         />
       </td>
     </tr>
