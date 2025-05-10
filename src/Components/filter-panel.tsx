@@ -24,6 +24,10 @@ import {
 } from "../redux/selectors";
 import { formatCurrency } from "../lib/utils";
 import { useTheme } from "../Components/theme/theme-provider";
+<<<<<<< HEAD
+import { Switch } from "@mui/material";
+=======
+>>>>>>> d1eacf8b4fae48b045a06de4edf8923455881ad6
 
 interface FilterPanelProps {
   isOpen: boolean;
