@@ -7,7 +7,7 @@ npm install
 ```js
 npm run dev
 ```
-Previre video: 
+Preview video: 
 https://drive.google.com/file/d/1ml4D76z4md_oUSnolkydODaSKmDX1E8q/view?usp=drive_link
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
