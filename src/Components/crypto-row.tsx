@@ -6,6 +6,9 @@ import type { Crypto } from "../types/crypto"
 import MiniChart from "./mini-chart"
 import { useTheme } from "./theme/theme-provider"
 
+// Define Theme type for better TypeScript support
+type Theme = "light" | "dark" | "system"
+
 interface CryptoRowProps {
   crypto: Crypto
   index: number
@@ -113,7 +116,11 @@ export default function CryptoRow({ crypto, index }: CryptoRowProps) {
         </div>
       </td>
       <td className="p-4">
-        <MiniChart data={crypto.chartData} change7d={crypto.change7d} theme={theme} />
+        <MiniChart
+          data={crypto.chartData}
+          change7d={crypto.change7d}
+          theme={theme}  // Pass the theme prop here
+        />
       </td>
     </tr>
   )
