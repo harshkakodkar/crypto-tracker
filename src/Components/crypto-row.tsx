@@ -6,16 +6,14 @@ import type { Crypto } from "../types/crypto"
 import MiniChart from "./mini-chart"
 import { useTheme } from "./theme/theme-provider"
 
-// Define Theme type for better TypeScript support
-type Theme = "light" | "dark" | "system"
-
+// Interface for the props, no need for Theme type declaration here
 interface CryptoRowProps {
   crypto: Crypto
   index: number
 }
 
 export default function CryptoRow({ crypto, index }: CryptoRowProps) {
-  const { theme } = useTheme()
+  const { theme } = useTheme() // Ensure theme is derived from your theme context
   const [priceFlash, setPriceFlash] = useState<"none" | "increase" | "decrease">("none")
   const [imgError, setImgError] = useState(false)
   const prevPriceRef = useRef(crypto.price)
